@@ -26,7 +26,7 @@ def test_training_loop(dummy_data, tmp_path):
     
     model_path = tmp_path / "model_test.pth"
     torch.save(model.state_dict(), model_path)
-    loaded_model = MonModel(input_dim=x.shape[1], hidden_dim=5)
+    loaded_model = monModel(input_dim=x.shape[1], hidden_dim=5)
     loaded_model.load_state_dict(torch.load(model_path))
     loaded_model.eval()
     with torch.no_grad():
