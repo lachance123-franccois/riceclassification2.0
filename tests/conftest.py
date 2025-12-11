@@ -1,6 +1,12 @@
 import pytest
+import sys
+import os
 import torch
-from riz.model import MonModel
+
+
+chemin= os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.append(chemin)
+from riz.model import monModel
 
 @pytest.fixture
 def dummy_data():
@@ -10,4 +16,4 @@ def dummy_data():
 
 @pytest.fixture
 def model():
-    return MonModel(input_dim=10, hidden_dim=5)
+    return monModel(input_dim=10, hidden_dim=5)

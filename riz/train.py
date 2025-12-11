@@ -2,7 +2,7 @@ import torch
 from torch.optim import Adam
 from torch.utils.data import DataLoader
 import matplotlib.pyplot as plt
-from model import MonModel
+from model import monModel
 from dataload import load_data
 from  Metrics import calcul_accuracy, plot_metrics, save_model
 import yaml
@@ -17,7 +17,7 @@ val_loader = DataLoader(val_dataset, batch_size=config["batch_size"], shuffle=Fa
 test_loader = DataLoader(test_dataset, batch_size=config["batch_size"], shuffle=False)
 
 input_dim = train_dataset.x.shape[1]
-model = MonModel(input_dim, config["hidden_neurons"]).to(device)
+model = monModel(input_dim, config["hidden_neurons"]).to(device)
 criterion = torch.nn.BCELoss()
 optimizer = Adam(model.parameters(), lr=config["learning_rate"])
 

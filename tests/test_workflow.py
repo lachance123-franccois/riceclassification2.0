@@ -1,11 +1,15 @@
 import torch
-from riz.model import MonModel
-from riz.utils import calcul_accuracy
+import os
+import sys
+chemin= os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.append(chemin)
+from riz.model import monModel
+from riz.Metrics import calcul_accuracy
 import pytest
 
 def test_training_workflow(dummy_data):
     x, y = dummy_data
-    model = MonModel(input_dim=x.shape[1], hidden_dim=5)
+    model = monModel(input_dim=x.shape[1], hidden_dim=5)
     criterion = torch.nn.BCELoss()
     optimizer = torch.optim.Adam(model.parameters(), lr=0.01)
     model.train()
