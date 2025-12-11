@@ -1,6 +1,6 @@
 import pytest
 import torch
-from src.model import MonModel
+from riz.model import MonModel
 
 @pytest.fixture
 def dummy_data():
