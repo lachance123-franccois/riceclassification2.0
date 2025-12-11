@@ -1,7 +1,7 @@
 import torch
 import matplotlib.pyplot as plt
 
-def calculate_accuracy(y_pred, y_true, seuil=0.5):
+def calcul_accuracy(y_pred, y_true, seuil=0.5):
     correct = ((y_pred >= seuil) == y_true).float()
     return correct.mean().item() * 100  # accuracy en %
 
