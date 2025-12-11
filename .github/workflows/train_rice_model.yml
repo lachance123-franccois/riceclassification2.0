@@ -1,4 +1,4 @@
-name: rice-classification-tests
+name: Python CI
 
 on:
   push:
@@ -13,7 +13,7 @@ jobs:
 
     strategy:
       matrix:
-        python-version: [3.10, 3.11]
+        python-version: [3.10, 3.11]  # versions Python valides
 
     steps:
     - name: Checkout repository
