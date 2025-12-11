@@ -1,0 +1,5 @@
+dataset_path: "riceClassification.csv"
+batch_size: 64
+learning_rate: 0.001
+hidden_neurons: 10
+epochs: 15
