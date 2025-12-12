@@ -7,7 +7,7 @@ def calcul_accuracy(y_pred, y_true, seuil=0.5):
 
 def plot_metrics(train_loss, val_loss, train_acc, val_acc):
 
-    fig, axs = plt.subplots(1, 2, figsize=(15,5))    
+    fig, axs = plt.subplots(1, 2, figsize=(12,7))    
     axs[0].plot(train_loss, label="Train Loss")
     axs[0].plot(val_loss, label="Val Loss")
     axs[0].set_title("Loss")
