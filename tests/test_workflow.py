@@ -9,7 +9,7 @@ import pytest
 
 def test_training_workflow(dummy_data):
     x, y = dummy_data
-    model = monModel(input_dim=x.shape[1], hidden_dim=5)
+    model = monModel(input_dim=x.shape[1], nbr_hidden=5)
     criterion = torch.nn.BCELoss()
     optimizer = torch.optim.Adam(model.parameters(), lr=0.01)
     model.train()
