@@ -16,4 +16,4 @@ def dummy_data():
 
 @pytest.fixture
 def model():
-    return monModel(input_dim=10, hidden_dim=5)
+    return monModel(input_dim=10, nbr_hidden=5)
