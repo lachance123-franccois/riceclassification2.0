@@ -22,8 +22,6 @@ riceclassification2.0/
       ├── test_workflow.py   
       └── test_utils.py      
       ````
-pov: ce schema a ete realiser avec une intelligence artificielle
-
 Le projet repose sur le fichier riceClassification.csv, comprenant plusieurs mesures géométriques des grains de riz :
 Aire
 Longueur de l’axe majeur
